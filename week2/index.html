@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>WDD330 Week 2 Notes</h1>
+    <br>
+    <h2>CH.2 Programming Basics</h2>
+    <h4>Reserved variable names in JavaScript:</h4>
+    abstract, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, export, extends, false, final, finally, float, for, function, goto, if, implements, import, in instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, volatile, void, while, with, yield
+    <br>
+    <br>
+    <h4>Assignment by reference:</h4>
+    const c = { value: 1 };<br>
+    let d = c; // c.value = 1, d.value = 1<br>
+    d.value = 2; // c.value = 2, d.value = 2<br>
+    <br>
+    <h4>Backticks allow for JavaScript to be placed in print statements</h4>
+    const age = 39;<br>
+    `I will be ${ age + 1 } next year`;<br>
+    Result = 'I will be 40 next year'<br>
+    
+    <h4>NaN:</h4>
+    Occurs when an operation is attempted and the result isn’t numerical. Ex. String * a number<br>
+    <br>
+    <h4>Type Coercion can be tricky:</h4>
+    '2' * 8;<br>
+    Result = 16<br>
+    <br>
+    '2' + 8;<br>
+    Result = '28'<br>
+    In the last problem, ‘2’ must be specified as an int before adding.<br> 
+    Ex. Number(‘2’) + 3 = 5; (you may also use parseInt)<br>
+    To convert a number to a string:<br>
+    String(3) = ‘3’<br>
+    <br>
+    <h4>Null & Undefined:</h4>
+    Null means 'no value'. It can be thought of as a placeholder that JavaScript uses to say "there should be a value here, but there isn’t at the moment."<br>
+    If this reminds you a lot of undefined then this is because they are both 'non-value' values, meaning they are similar, but behave slightly differently. For example, if you try to do sums with them:<br>
+    10 + null; // null behaves like zero<br>
+    Result = 10<br>
+    10 + undefined; // undefined is not a number<br>
+    Result = NaN<br>
+    null is coerced to be 0 , making the sum possible whereas undefined is coerced to NaN , making the sum impossible to perform.<br>
+    In general, values tend to be set to undefined by JavaScript, whereas values are usually set to null manually by the programmer.<br>
+    <br>
+    <h2>CH 3 Arrays, Logic, and Loops</h2>
+    <h4>Removing values from an array:</h4>
+    Delete avengers[3]; from the list [‘Cap’, ‘Iron man’, ‘Thor’, ‘Hulk’]<br>
+    Would delete Hulk and replace it with undefined [‘Cap’, ‘Iron man’, ‘Thor’, ‘undefined’]<br>
+    <br>
+    <h4>Swapping in JavaScript:</h4>
+    [x,y] = [y,x];<br>
+    <br>
+    <h4>Pop, Push, Shift, Unshift:</h4>
+    Will not leave an undefined value<br>
+    <br>
+    <h4>Maps and sets must be created by:</h4> 
+    Const name = new Map() or new Set()<br>
+    Weak maps and sets will enable the garbage collector to automatically remove any dead entries (preventing memory leaks)<br>
+    <br>
+    <h4>Looping over Maps:</h4>
+    const romanNumerals = new Map();<br>
+    romanNumerals.set(1,'I').set(2,'II').set(3,'III').set(4,'IV').set(5,'V');<br>
+    romanNumerals<br>
+    Result = Map { 1 => 'I', 2 => 'II', 3 => 'III', 4 => 'IV', 5 => 'V' }<br>
+    Every map object has a keys() method lets us iterate over each key with the following for-of loop:<br>
+    for(const key of romanNumerals.keys()) {<br>
+        console.log(key);<br>
+    }<br>
+    Result =<br>
+    1<br>
+    2<br>
+    3<br>
+    4<br>
+    5<br>
+    <h4>There is also a values() method that lets us iterate over the values in a similar way:</h4>
+    for(const value of RomanNumerals.values()) {<br>
+        console.log(value);<br>
+    }<br>
+    Result =<br>
+    I<br>
+    II<br>
+    III<br>
+    IV<br>
+    V<br>
+    <br>
+    <br>
+    <h2>CH 4 Functions</h2>
+    <h4>Defining a function:</h4>
+        <h5>Function Declarations:</h5>
+            function hello(){<br>
+        console.log('Hello World!');<br>
+    }<br>
+    <br>
+        <h5>Function Expressions: (anonymous functions) (make sure to finish expression with semi-colon)</h5>
+    const goodbye = function(){<br>
+        console.log('Goodbye World!');<br>
+    };<br>
+    <br>
+    <h4>Arrow Functions:</h4>
+    <h5>Benefits of arrow functions:</h5>
+    •	They are much less verbose than normal function declarations.<br>
+    •	Single parameters don't need putting into parentheses.<br>
+    •	The body of the function doesn't need placing inside a block if it's only one line.<br>
+    •	The return keyword isn't required if the return statement is the only statement in the body of the function.<br>
+    •	They don't bind their own value of this to the function (we'll see why this is a particularly useful property when we cover objects later in the book).<br>
+    <br>
+    Always anonymous functions<br>
+    const square = x => x*x;<br>
+    <h5>If no parameters needed, empty parentheses must be placed before arrow:</h5>
+        Const hello = () => alert(‘Hello World’);<br>
+    <br>
+    <h4>Callback: (can be used to call the function…back)</h4>
+    function sing(song,callback) {<br>
+        console.log(`I'm singing along to ${song}.`);<br>
+        callback();<br>
+    }<br>
+    
+    
+    
+    
+</body>
+
+</html>
