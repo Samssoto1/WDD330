@@ -1,32 +1,37 @@
 const links = [
     {
-        label: "Week1 notes",
+        label: "Week 1 Notes",
         url: "week1/index.html"
     },
     {
-        label: "Week2 notes",
+        label: "Week 2 Notes",
         url: "week2/index.html"
+    },
+    {
+        label: "Week 3 Team Activity",
+        url: "week3/teamactivity.html"
+    },
+    {
+        label: "Week 3 Notes",
+        url: "week3/index.html"
     }
 ]
 
 var myol = document.getElementById("myol")
 var count = 0;
 links.forEach(function (links) {
-    /*
-    count += 1
-    var header = document.createElement('h2');
-    var headerText = document.createTextNode("week");
-    header.appendChild(headerText);
-    */
-
-
     var a = document.createElement('a');
     var link = document.createTextNode(links.label);
     a.appendChild(link);
     a.title = links.label;
     a.href = links.url;
+    //a.style.backgroundColor = 'red';
     var br = document.createElement('br');
     a.appendChild(br);
     myol.appendChild(a);
+    myol.appendChild(document.createElement("br"))
+    myol.appendChild(document.createElement("br"))
+    
+
     
 });

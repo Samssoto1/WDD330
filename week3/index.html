@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Week 3 Notes</title>
+</head>
+<body>
+    <h1>WDD330 Week 3 Notes</h1>
+    <h2>CH 6. DOM</h2><br>
+    <p>Node lists are like arrays but aren’t. Items can be accessed through dot / index notation, and they contain a length property,
+        <br> however they don’t work with other array properties such as splice. </p><br>
+        <p>Example: listI = document.getElementsByTagName(‘li’) creates an array like list in which items can be targeted as such: listI[0]</p><br>
+    <h1>Attributes can be assigned with:</h1><br>
+    <p>The setAttribute method. For example: wonderWoman.setAttribute(‘id’, ‘amazon’); </p><br>
+    <h1>In order to create a new element with text you must: </h1><br>
+    <p>1. Create the element node</p><br>
+    <p>2. Create the text node</p><br>
+    <p>3. Append the text node to the element node</p><br>
+    <p>Either that or by changing the text content as so:</p><br>
+    <p>Const flash = document.createElement('li');</p>
+    <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+window.history.back();
+}
+</script>
+</body>
+</html>
