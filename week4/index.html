@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Notes</title>
+</head>
+<body>
+    <h1>WDD330 Week 4 Notes</h1>
+    <h2>CH 8. Forms</h2>
+    <h4>Form elements can be accessed by their names.</h4>
+    <p>Example: Const input = form.searchInput (form name would be the name of the element).</p><br>
+    <br>
+    <h4>Disabling submit button without event.default</h4>
+    <p>a submit button can be disabled by adding the disabled attribute to the input element</p><br>
+    <p>Example: <button type='submit' id ='submit' disabled>Submit</button></p><br>
+    <p>This can also be done in javascript like so:</p><br>
+    <p>document.getElementById('submit').disabled = true;</p><br>
+    <h2>CH 12. OOP</h2>
+    <h2>instanceOf allows you to check if something belongs to an object</h2>
+    <p>Example: greenDice = new redDice.constructor(10);</p><br>
+    <p>greenDice instanceOf Dice</p><br><br>
+    <p>This would respond true</p><br>
+    <h4>Static</h4>
+    <p>Static methods can only be called by the original class and not by instances</p><br>
+    <h4>Instances can be created by using the Object.create() method</h4>
+    <p>Example: const sam = Object.create(Human)</p><br>
+    <p>Sam is now an instance of Human</p>
+    <button onclick="goBack()">Go Back</button>
+    <script>
+    function goBack() {
+    window.history.back();
+    }
+    </script>
+</body>
+</html>
