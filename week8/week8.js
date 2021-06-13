@@ -1,3 +1,4 @@
+// Updated version
 // Init variables
 let list = document.querySelector("ul");
 let next;
