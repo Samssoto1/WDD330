@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 Notes</title>
+</head>
+<body>
+    <h1>WDD330 Week 9 Notes</h1>
+    <h2>CH 9 Window Object</h2><br>
+    <p>The window.history property can be used to access info about any previously visited pages in the current browser session</p><br>
+    <p>Windows.history.go() can be used to go to different pages</p><br>
+    <p>0 = current page</p><br>
+    <p>1 = goes forward</p><br>
+    <p>-1 = goes back</p><br>
+
+    <h2>CH 14 HTML5 API</h2><br>
+    <h4>Data- attribute:</h4>
+    <p>Contain only lowercase letters / numbers, hyphens, dots, colons or underscores</p><br>
+    <p>Include an optional string value</p><br>
+    <p>Allows for web page to be embedded with data using custom attributes</p><br>
+    <h4>Geolocation:</h4>
+    <p>Geolocation API provides information about the geographical position of the device. </p><br>
+    <p>We can use the position object with its useful properties:</p><br>
+    <p>position.speed, position.altitude, position.heading, position.timestamp</p><br>
+    <h4>Web Workers:</h4>
+    <p>Web workers are used to allow computationally complex operations to be performed in a separate thread,</p><br>
+    <p>meaning the flow of a program won’t suffer interruptions or freeze.</p><br>
+    <h4>Notifications:</h4>
+    <p>The Notification API allows us to show messages using the system’s notification.</p><br>
+    <p>In order to do so, one must first obtain permission using the Notification.requestPermission().</p><br>
+    <p>Once Notification.permission === “granted” a new Notification(‘can be created’);</p><br>
+    
+    
+
+    <button onclick="goBack()">Go Back</button>
+    <script>
+    function goBack() {
+    window.history.back();
+    }
+    </script>
+
+    
+</body>
+</html>
