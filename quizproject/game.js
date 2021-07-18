@@ -54,7 +54,7 @@ getNewQuestion = () => {
     // If the list is empty or counter is greater than amount of questions: end
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score); // pass score of the quiz to localStorage in cause user wants to save
-        return window.location.assign('end.html'); // redirect user to the end screen
+        return window.location.assign('./end.html'); // redirect user to the end screen
     }
 
 
