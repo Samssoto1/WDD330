@@ -66,6 +66,14 @@ const links = [
     {
         label: "Week 10 Team Activity",
         url: "week10/quakes.html"
+    },
+    {
+        label: "Week 11 Team Activity",
+        url: "week11/json-server/client/week11.html"
+    },
+    {
+        label: "Easy History Quiz App",
+        url: "quizproject/index.html"
     }
 ]
 
